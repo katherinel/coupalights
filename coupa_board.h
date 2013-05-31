@@ -7,7 +7,7 @@ public:
         static const int array_width = 65;
         static const int array_depth = 2;
         static int light_array[array_width][array_depth];
-        CoupaLight coupa_lights[];
+        CoupaLight coupa_lights[array_width];
         void add_light(int, int, int);
 };
 
@@ -28,7 +28,7 @@ int CoupaBoard::light_array[CoupaBoard::array_width][CoupaBoard::array_depth] = 
 
 void CoupaBoard::add_light (int pixel_num, int radius, int degree) {
   CoupaLight light (pixel_num, radius, degree);
-  coupa_lights[0] = light;  
+  coupa_lights[pixel_num - 1] = light;  
 }
 
 CoupaBoard::CoupaBoard () {
