@@ -1,6 +1,7 @@
 class CoupaLight {
 public: 
         CoupaLight (int, int, int);
+        CoupaLight ();
         int radius;
         int degree;
         int pixel_num;
@@ -14,4 +15,7 @@ CoupaLight::CoupaLight (int pixel, int radius_l, int degree_l) {
   pixel_num = pixel;
 }
 
+CoupaLight::CoupaLight (){
+  
+}
 
